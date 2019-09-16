@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using System.IO;
 
 
 namespace Barmen
 {
     public partial class Form1 : Form
     {
+        XDocument SaveFilePers = new XDocument();
         WorldDate date = new WorldDate();
 
         //Навыки
@@ -118,9 +121,18 @@ namespace Barmen
 
         void DateRenew()
         {
-            comboBox_Month.SelectedIndex = date.month - 1;
-            comboBox_Day.SelectedIndex = date.day - 1;
-            textBox_Year.Text = Convert.ToString(date.year);
+            int _day = date.day - 1, _month = date.month - 1, _year = date.year;
+            comboBox_Month.Visible = false;
+            comboBox_Day.Visible = false;
+            textBox_Year.Visible = false;
+
+            comboBox_Month.SelectedIndex = _month ;
+            comboBox_Day.SelectedIndex = _day;
+            textBox_Year.Text = _year.ToString();
+
+            comboBox_Month.Visible = true;
+            comboBox_Day.Visible = true;
+            textBox_Year.Visible = true;
         }
 
 
@@ -283,7 +295,8 @@ namespace Barmen
                 //Бытовые расходы
                 Money -= CostFlat + CostFood;
 
-                date.NextDay(); DateRenew();
+                date.NextDay();
+                DateRenew();
                 //Конец рабочего дня
             }
             //Денюжка
@@ -292,25 +305,33 @@ namespace Barmen
 
         private void textBox_LevelPerformance_TextChanged(object sender, EventArgs e)
         {
+            if (sender is TextBox && (sender as TextBox).TextLength != 0)
+            {
             Performance = Convert.ToInt32(textBox_LevelPerformance.Text);
             progressBar_Performance.Maximum = Convert.ToInt32(300 * Math.Pow(1.5, Performance - 1));
-
+            }
         }
         private void textBox_LevelVigilance_TextChanged(object sender, EventArgs e)
         {
-            Vigilance = Convert.ToInt32(textBox_LevelVigilance.Text);
-            progressBar_Vigilance.Maximum = Convert.ToInt32(300 * Math.Pow(1.5, Vigilance - 1));
-
+            if (sender is TextBox && (sender as TextBox).TextLength != 0)
+            {
+                Vigilance = Convert.ToInt32(textBox_LevelVigilance.Text);
+                progressBar_Vigilance.Maximum = Convert.ToInt32(300 * Math.Pow(1.5, Vigilance - 1));
+            }
         }
         private void textBox_LevelTrade_TextChanged(object sender, EventArgs e)
         {
+            if (sender is TextBox && (sender as TextBox).TextLength != 0)
+            {
             Trade = Convert.ToInt32(textBox_LevelTrade.Text);
             progressBar_Trade.Maximum = Convert.ToInt32(300 * Math.Pow(1.5, Trade - 1));
+            }
         }
 
         private void textBox_Popularity_TextChanged(object sender, EventArgs e)
         {
-            Popularity = Convert.ToInt32(textBox_Popularity.Text);
+            if(sender is TextBox && (sender as TextBox).TextLength != 0)
+                Popularity = Convert.ToInt32(textBox_Popularity.Text);
         }
 
         private void button_WorkAWeek_Click(object sender, EventArgs e)
@@ -329,6 +350,12 @@ namespace Barmen
 
         }
         private void textBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (sender is TextBox)
+                if ((sender as TextBox).Text.Length == 0)
+                    (sender as TextBox).Text = "0";
+        }
+        private void textBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (sender is TextBox)
                 if ((sender as TextBox).Text.Length == 0)
@@ -391,17 +418,20 @@ namespace Barmen
 
         private void textBox_Year_TextChanged(object sender, EventArgs e)
         {
-            date.year = Convert.ToInt32(textBox_Year.Text);
+            if (sender is TextBox && (sender as TextBox).TextLength != 0)
+                date.year = Convert.ToInt32(textBox_Year.Text);
         }
 
         private void comboBox_Month_SelectedIndexChanged(object sender, EventArgs e)
         {
-            date.month = comboBox_Month.SelectedIndex +1;
+            if (comboBox_Month.Visible == true)
+                date.month = comboBox_Month.SelectedIndex +1;
         }
 
         private void comboBox_Day_SelectedIndexChanged(object sender, EventArgs e)
         {
-            date.day = comboBox_Month.SelectedIndex+1;
+            if(comboBox_Day.Visible == true)
+                date.day = comboBox_Day.SelectedIndex+1;
         }
 
         private void button_WorkWeekend_Click(object sender, EventArgs e)
@@ -587,7 +617,75 @@ namespace Barmen
             }
         }
 
+        private void button_SaveFile_Click(object sender, EventArgs e)
+        {
+            if (File.Exists("Pers.xml")) File.Delete("Pers.xml");
 
+            XElement Pers = new XElement("Persone");
+            Pers.Add(new XAttribute("Trade", Trade));
+            Pers.Add(new XAttribute("Performance", Performance));
+            Pers.Add(new XAttribute("Vigilance", Vigilance));
+            Pers.Add(new XAttribute("Persuasiveness", Persuasiveness));
+            Pers.Add(new XAttribute("progressBar_Trade", progressBar_Trade.Value));
+            Pers.Add(new XAttribute("progressBar_Performance", progressBar_Performance.Value));
+            Pers.Add(new XAttribute("progressBar_Vigilance", progressBar_Vigilance.Value));
+            Pers.Add(new XAttribute("progressBar_Persuasiveness", progressBar_Persuasiveness.Value));
+
+            Pers.Add(new XAttribute("Popularity", Popularity));
+            Pers.Add(new XAttribute("PartSoldMugs", PartSoldMugs));
+            Pers.Add(new XAttribute("PartSoldBarels", PartSoldBarels));
+            Pers.Add(new XAttribute("CostSoldMugs", CostSoldMugs));
+            Pers.Add(new XAttribute("CostSoldBarels", CostSoldBarels));
+
+            Pers.Add(new XAttribute("textBox_Year", textBox_Year.Text));
+            Pers.Add(new XAttribute("comboBox_Month", comboBox_Month.SelectedIndex));
+            Pers.Add(new XAttribute("comboBox_Day", comboBox_Day.SelectedIndex));
+
+            Pers.Add(new XAttribute("progressBar_Damage", progressBar_Damage.Value));
+            Pers.Add(new XAttribute("Weekends", Weekends));
+            Pers.Add(new XAttribute("Money", Money));
+            Pers.Add(new XAttribute("CostFlat", CostFlat));
+            Pers.Add(new XAttribute("CostFood", CostFood));
+
+            SaveFilePers = new XDocument();
+            SaveFilePers.Add(Pers);
+            SaveFilePers.Save("Pers.xml");
+        }
+
+        private void button_LoadFile_Click(object sender, EventArgs e)
+        {
+            if (!File.Exists("Pers.xml")) return;
+
+            SaveFilePers = XDocument.Load("Pers.xml");
+            XElement Pers = SaveFilePers.Root;
+
+            Trade = Convert.ToInt32(Pers.Attribute("Trade").Value);
+            Performance = Convert.ToInt32(Pers.Attribute("Performance").Value);
+            Vigilance = Convert.ToInt32(Pers.Attribute("Vigilance").Value);
+            Persuasiveness = Convert.ToInt32(Pers.Attribute("Persuasiveness").Value);
+            progressBar_Trade.Value = Convert.ToInt32(Pers.Attribute("progressBar_Trade").Value);
+            progressBar_Performance.Value = Convert.ToInt32(Pers.Attribute("progressBar_Performance").Value);
+            progressBar_Vigilance.Value = Convert.ToInt32(Pers.Attribute("progressBar_Vigilance").Value);
+            progressBar_Persuasiveness.Value = Convert.ToInt32(Pers.Attribute("progressBar_Persuasiveness").Value);
+
+            Popularity = Convert.ToInt32(Pers.Attribute("Popularity").Value);
+            PartSoldMugs = Convert.ToInt32(Pers.Attribute("PartSoldMugs").Value);
+            PartSoldBarels = Convert.ToInt32(Pers.Attribute("PartSoldBarels").Value);
+            CostSoldMugs = Convert.ToInt32(Pers.Attribute("CostSoldMugs").Value);
+            CostSoldBarels = Convert.ToInt32(Pers.Attribute("CostSoldBarels").Value);
+
+            textBox_Year.Text = Convert.ToString(Pers.Attribute("textBox_Year").Value);
+            comboBox_Month.SelectedIndex = Convert.ToInt32(Pers.Attribute("comboBox_Month").Value);
+            comboBox_Day.SelectedIndex = Convert.ToInt32(Pers.Attribute("comboBox_Day").Value);
+
+            progressBar_Damage.Value = Convert.ToInt32(Pers.Attribute("progressBar_Damage").Value);
+            Weekends = Convert.ToInt32(Pers.Attribute("Weekends").Value);
+            Money = Convert.ToInt32(Pers.Attribute("Money").Value);
+            CostFlat = Convert.ToInt32(Pers.Attribute("CostFlat").Value);
+            CostFood = Convert.ToInt32(Pers.Attribute("CostFood").Value);
+
+            
+        }
     }
 
 
@@ -635,7 +733,7 @@ namespace Barmen
         public string Date()
         {
             return cycle.ToString() + "." + year.ToString() + "г. "
-                + day.ToString() + " " + months[month+1];
+                + day.ToString() + " " + months[month-1];
         }
     }
 

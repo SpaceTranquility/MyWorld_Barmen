@@ -97,6 +97,8 @@
             this.label18 = new System.Windows.Forms.Label();
             this.textBox_CostFlat = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.button_LoadFile = new System.Windows.Forms.Button();
+            this.button_SaveFile = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -165,7 +167,7 @@
             this.textBox_LevelVigilance.Name = "textBox_LevelVigilance";
             this.textBox_LevelVigilance.Size = new System.Drawing.Size(43, 21);
             this.textBox_LevelVigilance.TabIndex = 4;
-            this.textBox_LevelVigilance.Text = "2";
+            this.textBox_LevelVigilance.Text = "0";
             this.textBox_LevelVigilance.TextChanged += new System.EventHandler(this.textBox_LevelVigilance_TextChanged);
             this.textBox_LevelVigilance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             this.textBox_LevelVigilance.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyUp);
@@ -177,7 +179,7 @@
             this.textBox_LevelPersuasiveness.Name = "textBox_LevelPersuasiveness";
             this.textBox_LevelPersuasiveness.Size = new System.Drawing.Size(43, 21);
             this.textBox_LevelPersuasiveness.TabIndex = 4;
-            this.textBox_LevelPersuasiveness.Text = "2";
+            this.textBox_LevelPersuasiveness.Text = "0";
             this.textBox_LevelPersuasiveness.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             this.textBox_LevelPersuasiveness.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyUp);
             // 
@@ -188,7 +190,7 @@
             this.textBox_LevelPerformance.Name = "textBox_LevelPerformance";
             this.textBox_LevelPerformance.Size = new System.Drawing.Size(43, 21);
             this.textBox_LevelPerformance.TabIndex = 4;
-            this.textBox_LevelPerformance.Text = "6";
+            this.textBox_LevelPerformance.Text = "0";
             this.textBox_LevelPerformance.TextChanged += new System.EventHandler(this.textBox_LevelPerformance_TextChanged);
             this.textBox_LevelPerformance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             this.textBox_LevelPerformance.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyUp);
@@ -200,7 +202,7 @@
             this.textBox_LevelTrade.Name = "textBox_LevelTrade";
             this.textBox_LevelTrade.Size = new System.Drawing.Size(43, 21);
             this.textBox_LevelTrade.TabIndex = 4;
-            this.textBox_LevelTrade.Text = "7";
+            this.textBox_LevelTrade.Text = "0";
             this.textBox_LevelTrade.TextChanged += new System.EventHandler(this.textBox_LevelTrade_TextChanged);
             this.textBox_LevelTrade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             this.textBox_LevelTrade.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyUp);
@@ -704,7 +706,7 @@
             this.textBox_CostBarelsCost.Name = "textBox_CostBarelsCost";
             this.textBox_CostBarelsCost.Size = new System.Drawing.Size(32, 21);
             this.textBox_CostBarelsCost.TabIndex = 4;
-            this.textBox_CostBarelsCost.Text = "30";
+            this.textBox_CostBarelsCost.Text = "1";
             this.textBox_CostBarelsCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             this.textBox_CostBarelsCost.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyUp);
             // 
@@ -715,7 +717,7 @@
             this.textBox_CostSoldMugs.Name = "textBox_CostSoldMugs";
             this.textBox_CostSoldMugs.Size = new System.Drawing.Size(32, 21);
             this.textBox_CostSoldMugs.TabIndex = 4;
-            this.textBox_CostSoldMugs.Text = "3";
+            this.textBox_CostSoldMugs.Text = "1";
             this.textBox_CostSoldMugs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             this.textBox_CostSoldMugs.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyUp);
             // 
@@ -737,8 +739,9 @@
             this.textBox_Popularity.Name = "textBox_Popularity";
             this.textBox_Popularity.Size = new System.Drawing.Size(43, 21);
             this.textBox_Popularity.TabIndex = 4;
-            this.textBox_Popularity.Text = "8";
+            this.textBox_Popularity.Text = "0";
             this.textBox_Popularity.TextChanged += new System.EventHandler(this.textBox_Popularity_TextChanged);
+            this.textBox_Popularity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyUp);
             this.textBox_Popularity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             this.textBox_Popularity.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyUp);
             // 
@@ -749,7 +752,7 @@
             this.textBox_PartSoldMugs.Name = "textBox_PartSoldMugs";
             this.textBox_PartSoldMugs.Size = new System.Drawing.Size(31, 21);
             this.textBox_PartSoldMugs.TabIndex = 4;
-            this.textBox_PartSoldMugs.Text = "10";
+            this.textBox_PartSoldMugs.Text = "1";
             this.textBox_PartSoldMugs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             this.textBox_PartSoldMugs.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyUp);
             // 
@@ -760,7 +763,7 @@
             this.textBox_Days.Name = "textBox_Days";
             this.textBox_Days.Size = new System.Drawing.Size(43, 21);
             this.textBox_Days.TabIndex = 4;
-            this.textBox_Days.Text = "12";
+            this.textBox_Days.Text = "0";
             this.textBox_Days.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             this.textBox_Days.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyUp);
             // 
@@ -920,7 +923,7 @@
             this.textBox_CostFood.Name = "textBox_CostFood";
             this.textBox_CostFood.Size = new System.Drawing.Size(41, 21);
             this.textBox_CostFood.TabIndex = 4;
-            this.textBox_CostFood.Text = "3";
+            this.textBox_CostFood.Text = "0";
             this.textBox_CostFood.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             this.textBox_CostFood.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyUp);
             // 
@@ -941,7 +944,7 @@
             this.textBox_CostFlat.Name = "textBox_CostFlat";
             this.textBox_CostFlat.Size = new System.Drawing.Size(41, 21);
             this.textBox_CostFlat.TabIndex = 4;
-            this.textBox_CostFlat.Text = "4";
+            this.textBox_CostFlat.Text = "0";
             this.textBox_CostFlat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             this.textBox_CostFlat.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyUp);
             // 
@@ -955,11 +958,33 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "Плата в день за постой";
             // 
+            // button_LoadFile
+            // 
+            this.button_LoadFile.Location = new System.Drawing.Point(203, 548);
+            this.button_LoadFile.Name = "button_LoadFile";
+            this.button_LoadFile.Size = new System.Drawing.Size(105, 23);
+            this.button_LoadFile.TabIndex = 5;
+            this.button_LoadFile.Text = "Load";
+            this.button_LoadFile.UseVisualStyleBackColor = true;
+            this.button_LoadFile.Click += new System.EventHandler(this.button_LoadFile_Click);
+            // 
+            // button_SaveFile
+            // 
+            this.button_SaveFile.Location = new System.Drawing.Point(43, 548);
+            this.button_SaveFile.Name = "button_SaveFile";
+            this.button_SaveFile.Size = new System.Drawing.Size(105, 23);
+            this.button_SaveFile.TabIndex = 5;
+            this.button_SaveFile.Text = "Save";
+            this.button_SaveFile.UseVisualStyleBackColor = true;
+            this.button_SaveFile.Click += new System.EventHandler(this.button_SaveFile_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(606, 552);
+            this.ClientSize = new System.Drawing.Size(606, 583);
+            this.Controls.Add(this.button_SaveFile);
+            this.Controls.Add(this.button_LoadFile);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -1053,6 +1078,8 @@
         private System.Windows.Forms.Button button_LookAtBar;
         private System.Windows.Forms.CheckBox checkBox_ConvinceAll;
         private System.Windows.Forms.CheckBox checkBox_ConvinceSome;
+        private System.Windows.Forms.Button button_LoadFile;
+        private System.Windows.Forms.Button button_SaveFile;
     }
 }
 

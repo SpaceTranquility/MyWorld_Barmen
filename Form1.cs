@@ -13,11 +13,83 @@ namespace Barmen
 {
     public partial class Form1 : Form
     {
+        //Навыки
+        int Trade
+        {
+            get {return Convert.ToInt32(textBox_LevelTrade.Text);}
+            set { textBox_LevelTrade.Text = value.ToString(); }
+        }
+        int Performance
+        {
+            get { return Convert.ToInt32(textBox_LevelPerformance.Text); }
+            set { textBox_LevelPerformance.Text = value.ToString(); }
+        }
+        int Vigilance
+        {
+            get { return Convert.ToInt32(textBox_LevelVigilance.Text); }
+            set { textBox_LevelVigilance.Text = value.ToString(); }
+        }
+        //Деньги
+        int Money
+        {
+            get { return Convert.ToInt32(textBox_Money.Text); }
+            set { textBox_Money.Text = value.ToString(); }
+        }
+        int CostFlat
+        {
+            get { return Convert.ToInt32(textBox_CostFlat.Text); }
+            set { textBox_CostFlat.Text = value.ToString(); }
+        }
+        int CostFood
+        {
+            get { return Convert.ToInt32(textBox_CostFood.Text); }
+            set { textBox_CostFood.Text = value.ToString(); }
+        }
+        //Работа
+        int Days
+        {
+            get { return Convert.ToInt32(textBox_Days.Text); }
+            set { textBox_Days.Text = value.ToString(); }
+        }
+        int Weekends
+        {
+            get { return Convert.ToInt32(textBox_Weekends.Text); }
+            set { textBox_Weekends.Text = value.ToString(); }
+        }
+        int Popularity
+        {
+            get { return Convert.ToInt32(textBox_Popularity.Text); }
+            set { textBox_Popularity.Text = value.ToString(); }
+        }
+        int CostSoldMugs
+        {
+            get { return Convert.ToInt32(textBox_CostSoldMugs.Text); }
+            set { textBox_CostSoldMugs.Text = value.ToString(); }
+        }  
 
-        int Trade = 0, Performance = 0, Vigilance = 0;
-        int Money = 0;
-        int WorkDayBaforeWeekend = 6, weekends = 0;
-        int Popularity = 0; const double PopularK = 1.6;
+        int CostSoldBarels
+        {
+            get { return Convert.ToInt32(textBox_CostBarelsCost.Text); }
+            set { textBox_CostBarelsCost.Text = value.ToString(); }
+        }
+        int PartSoldMugs
+        {
+            get { return Convert.ToInt32(textBox_PartSoldMugs.Text); }
+            set { textBox_PartSoldMugs.Text = value.ToString(); }
+        }
+        int PartSoldBarels
+        {
+            get { return Convert.ToInt32(textBox_PartSoldBarels.Text); }
+            set { textBox_PartSoldBarels.Text = value.ToString(); }
+        }
+        int Prize
+        {
+            get { return Convert.ToInt32(textBox_Prize.Text); }
+            set { textBox_Prize.Text = value.ToString(); }
+        }
+
+        const double PopularK = 1.6;
+        int WorkDayBaforeWeekend = 6;
 
         Random random = new Random();
         public int d2 { get { return random.Next(1, 2); } }
@@ -35,7 +107,7 @@ namespace Barmen
 
 
 
-
+        //Работать несколько дней
         private void button_Work_Click(object sender, EventArgs e)
         {
             //Активация элементов формы
@@ -49,19 +121,15 @@ namespace Barmen
             label_Tips.Text = "0";
             label_Salaray.Visible = true;
             label_Salaray.Text = "0";
-            label_Bayers.Visible = false;
+            label_Bayers.Visible = true;
             label_Bayers.Text = "0";
 
             int NumDices = Convert.ToInt32(Convert.ToDouble(Popularity) * PopularK);
-            int days = Convert.ToInt32(textBox_days.Text);
-            int SoldMugs = 0, soldBarels = 0, Tips = 0;
+            int SoldMugs = 0, soldBarels = 0, Tips = 0, Salary = 0;
             //Получение стоимости
-            int CostSoldMugs = Convert.ToInt32(textBox_SalaryMugCost.Text);
-            int CostSoldBarels = Convert.ToInt32(textBox_SalaryBarelCost.Text);
-            int PartSoldMugs = Convert.ToInt32(textBox_SalaryMugs.Text);
-            int PartSoldBarels = Convert.ToInt32(textBox_SalaryBarels.Text);
 
-            for (int i = 1; i <= days; i++)
+
+            for (int i = 1; i <= Days; i++)
             {//Рабочий день
                 int NumBuyes = Dices(NumDices), Party=0; //Число посетителей
                 int dicePer = 0, diceСheck, resPers = 0, resСheck = 0;
@@ -111,16 +179,20 @@ namespace Barmen
                 label_SoldMug.Text = SoldMugs.ToString();
                 label_Parties.Text = Convert.ToString(Convert.ToInt32(label_Parties.Text) + Party);
                 label_SoldBarels.Text = soldBarels.ToString();
-                label_Tips.Text = Tips.ToString();
-
-
-
-                label_Salaray.Text = Convert.ToString
-                    (Convert.ToInt32(SoldMugs /PartSoldMugs * CostSoldMugs) +
-                    Convert.ToInt32(soldBarels/ PartSoldBarels * CostSoldBarels));
+                label_Tips.Text = "Чаевые:" + Tips.ToString();
+                //Зарплата
+                Salary = Convert.ToInt32(SoldMugs / PartSoldMugs * CostSoldMugs) +
+                    Convert.ToInt32(soldBarels / PartSoldBarels * CostSoldBarels);
+                label_Salaray.Text = "Зарплата: "+Salary.ToString();
+                //Отсчёт выходных                
+                if (--WorkDayBaforeWeekend <= 0) { WorkDayBaforeWeekend = 6; Weekends++; }
+                //Бытовые расходы
+                Money -= CostFlat + CostFood;
 
                 //Конец рабочего дня
-            } 
+            }
+            //Денюжка
+            Money += Salary + Tips;
         }
 
         private void textBox_LevelPerformance_TextChanged(object sender, EventArgs e)
@@ -150,7 +222,7 @@ namespace Barmen
 
         private void button_WorkAWeek_Click(object sender, EventArgs e)
         {
-            textBox_days.Text = "6";
+            Days = 6;
             button_Work.PerformClick();
         }
 
@@ -176,6 +248,11 @@ namespace Barmen
             label_Tips.Visible = false;
             label_Salaray.Visible = false;
             label_Bayers.Visible = false;
+        }
+
+        private void button_Prize_Click(object sender, EventArgs e)
+        {
+            Money += Prize;
         }
     }
 }

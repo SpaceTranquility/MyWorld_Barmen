@@ -69,12 +69,12 @@
             this.button_WorkAWeek = new System.Windows.Forms.Button();
             this.button_Prize = new System.Windows.Forms.Button();
             this.button_Work = new System.Windows.Forms.Button();
-            this.textBox_SalaryBarelCost = new System.Windows.Forms.TextBox();
-            this.textBox_SalaryMugCost = new System.Windows.Forms.TextBox();
-            this.textBox_SalaryBarels = new System.Windows.Forms.TextBox();
+            this.textBox_CostBarelsCost = new System.Windows.Forms.TextBox();
+            this.textBox_CostSoldMugs = new System.Windows.Forms.TextBox();
+            this.textBox_PartSoldBarels = new System.Windows.Forms.TextBox();
             this.textBox_Popularity = new System.Windows.Forms.TextBox();
-            this.textBox_SalaryMugs = new System.Windows.Forms.TextBox();
-            this.textBox_days = new System.Windows.Forms.TextBox();
+            this.textBox_PartSoldMugs = new System.Windows.Forms.TextBox();
+            this.textBox_Days = new System.Windows.Forms.TextBox();
             this.label_SoldBarels = new System.Windows.Forms.Label();
             this.label_Bayers = new System.Windows.Forms.Label();
             this.label_Parties = new System.Windows.Forms.Label();
@@ -155,7 +155,7 @@
             this.textBox_LevelVigilance.Name = "textBox_LevelVigilance";
             this.textBox_LevelVigilance.Size = new System.Drawing.Size(43, 21);
             this.textBox_LevelVigilance.TabIndex = 4;
-            this.textBox_LevelVigilance.Text = "0";
+            this.textBox_LevelVigilance.Text = "2";
             this.textBox_LevelVigilance.TextChanged += new System.EventHandler(this.textBox_LevelVigilance_TextChanged);
             this.textBox_LevelVigilance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
@@ -166,8 +166,7 @@
             this.textBoxLevelPersuasiveness.Name = "textBoxLevelPersuasiveness";
             this.textBoxLevelPersuasiveness.Size = new System.Drawing.Size(43, 21);
             this.textBoxLevelPersuasiveness.TabIndex = 4;
-            this.textBoxLevelPersuasiveness.Text = "0";
-            this.textBoxLevelPersuasiveness.TextChanged += new System.EventHandler(this.textBox_LevelTrade_TextChanged);
+            this.textBoxLevelPersuasiveness.Text = "2";
             this.textBoxLevelPersuasiveness.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // textBox_LevelPerformance
@@ -177,7 +176,7 @@
             this.textBox_LevelPerformance.Name = "textBox_LevelPerformance";
             this.textBox_LevelPerformance.Size = new System.Drawing.Size(43, 21);
             this.textBox_LevelPerformance.TabIndex = 4;
-            this.textBox_LevelPerformance.Text = "0";
+            this.textBox_LevelPerformance.Text = "6";
             this.textBox_LevelPerformance.TextChanged += new System.EventHandler(this.textBox_LevelPerformance_TextChanged);
             this.textBox_LevelPerformance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
@@ -188,7 +187,7 @@
             this.textBox_LevelTrade.Name = "textBox_LevelTrade";
             this.textBox_LevelTrade.Size = new System.Drawing.Size(43, 21);
             this.textBox_LevelTrade.TabIndex = 4;
-            this.textBox_LevelTrade.Text = "0";
+            this.textBox_LevelTrade.Text = "7";
             this.textBox_LevelTrade.TextChanged += new System.EventHandler(this.textBox_LevelTrade_TextChanged);
             this.textBox_LevelTrade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
@@ -344,12 +343,12 @@
             this.groupBox3.Controls.Add(this.button_WorkAWeek);
             this.groupBox3.Controls.Add(this.button_Prize);
             this.groupBox3.Controls.Add(this.button_Work);
-            this.groupBox3.Controls.Add(this.textBox_SalaryBarelCost);
-            this.groupBox3.Controls.Add(this.textBox_SalaryMugCost);
-            this.groupBox3.Controls.Add(this.textBox_SalaryBarels);
+            this.groupBox3.Controls.Add(this.textBox_CostBarelsCost);
+            this.groupBox3.Controls.Add(this.textBox_CostSoldMugs);
+            this.groupBox3.Controls.Add(this.textBox_PartSoldBarels);
             this.groupBox3.Controls.Add(this.textBox_Popularity);
-            this.groupBox3.Controls.Add(this.textBox_SalaryMugs);
-            this.groupBox3.Controls.Add(this.textBox_days);
+            this.groupBox3.Controls.Add(this.textBox_PartSoldMugs);
+            this.groupBox3.Controls.Add(this.textBox_Days);
             this.groupBox3.Controls.Add(this.label_SoldBarels);
             this.groupBox3.Controls.Add(this.label_Bayers);
             this.groupBox3.Controls.Add(this.label_Parties);
@@ -532,6 +531,7 @@
             this.button_Prize.TabIndex = 6;
             this.button_Prize.Text = "Спасибо";
             this.button_Prize.UseVisualStyleBackColor = true;
+            this.button_Prize.Click += new System.EventHandler(this.button_Prize_Click);
             // 
             // button_Work
             // 
@@ -544,35 +544,35 @@
             this.button_Work.UseVisualStyleBackColor = true;
             this.button_Work.Click += new System.EventHandler(this.button_Work_Click);
             // 
-            // textBox_SalaryBarelCost
+            // textBox_CostBarelsCost
             // 
-            this.textBox_SalaryBarelCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_SalaryBarelCost.Location = new System.Drawing.Point(242, 131);
-            this.textBox_SalaryBarelCost.Name = "textBox_SalaryBarelCost";
-            this.textBox_SalaryBarelCost.Size = new System.Drawing.Size(32, 21);
-            this.textBox_SalaryBarelCost.TabIndex = 4;
-            this.textBox_SalaryBarelCost.Text = "0";
-            this.textBox_SalaryBarelCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox_CostBarelsCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_CostBarelsCost.Location = new System.Drawing.Point(242, 131);
+            this.textBox_CostBarelsCost.Name = "textBox_CostBarelsCost";
+            this.textBox_CostBarelsCost.Size = new System.Drawing.Size(32, 21);
+            this.textBox_CostBarelsCost.TabIndex = 4;
+            this.textBox_CostBarelsCost.Text = "30";
+            this.textBox_CostBarelsCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
-            // textBox_SalaryMugCost
+            // textBox_CostSoldMugs
             // 
-            this.textBox_SalaryMugCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_SalaryMugCost.Location = new System.Drawing.Point(233, 104);
-            this.textBox_SalaryMugCost.Name = "textBox_SalaryMugCost";
-            this.textBox_SalaryMugCost.Size = new System.Drawing.Size(32, 21);
-            this.textBox_SalaryMugCost.TabIndex = 4;
-            this.textBox_SalaryMugCost.Text = "0";
-            this.textBox_SalaryMugCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox_CostSoldMugs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_CostSoldMugs.Location = new System.Drawing.Point(233, 104);
+            this.textBox_CostSoldMugs.Name = "textBox_CostSoldMugs";
+            this.textBox_CostSoldMugs.Size = new System.Drawing.Size(32, 21);
+            this.textBox_CostSoldMugs.TabIndex = 4;
+            this.textBox_CostSoldMugs.Text = "3";
+            this.textBox_CostSoldMugs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
-            // textBox_SalaryBarels
+            // textBox_PartSoldBarels
             // 
-            this.textBox_SalaryBarels.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_SalaryBarels.Location = new System.Drawing.Point(38, 131);
-            this.textBox_SalaryBarels.Name = "textBox_SalaryBarels";
-            this.textBox_SalaryBarels.Size = new System.Drawing.Size(31, 21);
-            this.textBox_SalaryBarels.TabIndex = 4;
-            this.textBox_SalaryBarels.Text = "0";
-            this.textBox_SalaryBarels.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox_PartSoldBarels.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_PartSoldBarels.Location = new System.Drawing.Point(38, 131);
+            this.textBox_PartSoldBarels.Name = "textBox_PartSoldBarels";
+            this.textBox_PartSoldBarels.Size = new System.Drawing.Size(31, 21);
+            this.textBox_PartSoldBarels.TabIndex = 4;
+            this.textBox_PartSoldBarels.Text = "1";
+            this.textBox_PartSoldBarels.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // textBox_Popularity
             // 
@@ -581,29 +581,29 @@
             this.textBox_Popularity.Name = "textBox_Popularity";
             this.textBox_Popularity.Size = new System.Drawing.Size(43, 21);
             this.textBox_Popularity.TabIndex = 4;
-            this.textBox_Popularity.Text = "0";
+            this.textBox_Popularity.Text = "8";
             this.textBox_Popularity.TextChanged += new System.EventHandler(this.textBox_Popularity_TextChanged);
             this.textBox_Popularity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
-            // textBox_SalaryMugs
+            // textBox_PartSoldMugs
             // 
-            this.textBox_SalaryMugs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_SalaryMugs.Location = new System.Drawing.Point(38, 104);
-            this.textBox_SalaryMugs.Name = "textBox_SalaryMugs";
-            this.textBox_SalaryMugs.Size = new System.Drawing.Size(31, 21);
-            this.textBox_SalaryMugs.TabIndex = 4;
-            this.textBox_SalaryMugs.Text = "0";
-            this.textBox_SalaryMugs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox_PartSoldMugs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_PartSoldMugs.Location = new System.Drawing.Point(38, 104);
+            this.textBox_PartSoldMugs.Name = "textBox_PartSoldMugs";
+            this.textBox_PartSoldMugs.Size = new System.Drawing.Size(31, 21);
+            this.textBox_PartSoldMugs.TabIndex = 4;
+            this.textBox_PartSoldMugs.Text = "10";
+            this.textBox_PartSoldMugs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
-            // textBox_days
+            // textBox_Days
             // 
-            this.textBox_days.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_days.Location = new System.Drawing.Point(78, 45);
-            this.textBox_days.Name = "textBox_days";
-            this.textBox_days.Size = new System.Drawing.Size(43, 21);
-            this.textBox_days.TabIndex = 4;
-            this.textBox_days.Text = "0";
-            this.textBox_days.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox_Days.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_Days.Location = new System.Drawing.Point(78, 45);
+            this.textBox_Days.Name = "textBox_Days";
+            this.textBox_Days.Size = new System.Drawing.Size(43, 21);
+            this.textBox_Days.TabIndex = 4;
+            this.textBox_Days.Text = "12";
+            this.textBox_Days.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // label_SoldBarels
             // 
@@ -745,7 +745,7 @@
             this.textBox_CostFood.Name = "textBox_CostFood";
             this.textBox_CostFood.Size = new System.Drawing.Size(41, 21);
             this.textBox_CostFood.TabIndex = 4;
-            this.textBox_CostFood.Text = "0";
+            this.textBox_CostFood.Text = "3";
             this.textBox_CostFood.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // label18
@@ -765,7 +765,7 @@
             this.textBox_CostFlat.Name = "textBox_CostFlat";
             this.textBox_CostFlat.Size = new System.Drawing.Size(41, 21);
             this.textBox_CostFlat.TabIndex = 4;
-            this.textBox_CostFlat.Text = "0";
+            this.textBox_CostFlat.Text = "4";
             this.textBox_CostFlat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // label17
@@ -837,7 +837,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button_WorkAWeek;
         private System.Windows.Forms.Button button_Work;
-        private System.Windows.Forms.TextBox textBox_days;
+        private System.Windows.Forms.TextBox textBox_Days;
         private System.Windows.Forms.Label label_SoldBarels;
         private System.Windows.Forms.Label label_Parties;
         private System.Windows.Forms.Label label_SoldMug;
@@ -851,10 +851,10 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox_SalaryBarelCost;
-        private System.Windows.Forms.TextBox textBox_SalaryMugCost;
-        private System.Windows.Forms.TextBox textBox_SalaryBarels;
-        private System.Windows.Forms.TextBox textBox_SalaryMugs;
+        private System.Windows.Forms.TextBox textBox_CostBarelsCost;
+        private System.Windows.Forms.TextBox textBox_CostSoldMugs;
+        private System.Windows.Forms.TextBox textBox_PartSoldBarels;
+        private System.Windows.Forms.TextBox textBox_PartSoldMugs;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox textBox_CostFlat;
         private System.Windows.Forms.Label label17;

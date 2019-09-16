@@ -29,65 +29,89 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.progressBar3 = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.progressBar_Vigilance = new System.Windows.Forms.ProgressBar();
+            this.progressBar_Performance = new System.Windows.Forms.ProgressBar();
+            this.progressBar_Persuasiveness = new System.Windows.Forms.ProgressBar();
+            this.progressBar_Trade = new System.Windows.Forms.ProgressBar();
+            this.textBox_LevelVigilance = new System.Windows.Forms.TextBox();
+            this.textBoxLevelPersuasiveness = new System.Windows.Forms.TextBox();
+            this.textBox_LevelPerformance = new System.Windows.Forms.TextBox();
+            this.textBox_LevelTrade = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox_Money = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.progressBar4 = new System.Windows.Forms.ProgressBar();
+            this.button9 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox_Prize = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label_Tips = new System.Windows.Forms.Label();
             this.label_Salaray = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label_buyBarels = new System.Windows.Forms.Label();
-            this.label_companies = new System.Windows.Forms.Label();
-            this.label_buyMug = new System.Windows.Forms.Label();
-            this.label_popularity = new System.Windows.Forms.Label();
+            this.button_WorkAWeek = new System.Windows.Forms.Button();
+            this.button_Prize = new System.Windows.Forms.Button();
+            this.button_Work = new System.Windows.Forms.Button();
+            this.textBox_SalaryBarelCost = new System.Windows.Forms.TextBox();
+            this.textBox_SalaryMugCost = new System.Windows.Forms.TextBox();
+            this.textBox_SalaryBarels = new System.Windows.Forms.TextBox();
+            this.textBox_Popularity = new System.Windows.Forms.TextBox();
+            this.textBox_SalaryMugs = new System.Windows.Forms.TextBox();
+            this.textBox_days = new System.Windows.Forms.TextBox();
+            this.label_SoldBarels = new System.Windows.Forms.Label();
+            this.label_Bayers = new System.Windows.Forms.Label();
+            this.label_Parties = new System.Windows.Forms.Label();
+            this.label_SoldMug = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.labelWeekends = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.label_Result = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.textBox_Weekends = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.textBox_CostFood = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox_CostFlat = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.progressBar3);
-            this.groupBox1.Controls.Add(this.progressBar2);
-            this.groupBox1.Controls.Add(this.progressBar1);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.progressBar_Vigilance);
+            this.groupBox1.Controls.Add(this.progressBar_Performance);
+            this.groupBox1.Controls.Add(this.progressBar_Persuasiveness);
+            this.groupBox1.Controls.Add(this.progressBar_Trade);
+            this.groupBox1.Controls.Add(this.textBox_LevelVigilance);
+            this.groupBox1.Controls.Add(this.textBoxLevelPersuasiveness);
+            this.groupBox1.Controls.Add(this.textBox_LevelPerformance);
+            this.groupBox1.Controls.Add(this.textBox_LevelTrade);
             this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
@@ -96,74 +120,103 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Параметры";
             // 
-            // progressBar3
+            // progressBar_Vigilance
             // 
-            this.progressBar3.Location = new System.Drawing.Point(220, 136);
-            this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(85, 10);
-            this.progressBar3.TabIndex = 5;
+            this.progressBar_Vigilance.Location = new System.Drawing.Point(220, 99);
+            this.progressBar_Vigilance.Name = "progressBar_Vigilance";
+            this.progressBar_Vigilance.Size = new System.Drawing.Size(85, 10);
+            this.progressBar_Vigilance.TabIndex = 5;
             // 
-            // progressBar2
+            // progressBar_Performance
             // 
-            this.progressBar2.Location = new System.Drawing.Point(220, 104);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(85, 10);
-            this.progressBar2.TabIndex = 5;
+            this.progressBar_Performance.Location = new System.Drawing.Point(220, 67);
+            this.progressBar_Performance.Name = "progressBar_Performance";
+            this.progressBar_Performance.Size = new System.Drawing.Size(85, 10);
+            this.progressBar_Performance.TabIndex = 5;
             // 
-            // progressBar1
+            // progressBar_Persuasiveness
             // 
-            this.progressBar1.Location = new System.Drawing.Point(220, 72);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(85, 10);
-            this.progressBar1.TabIndex = 5;
+            this.progressBar_Persuasiveness.Location = new System.Drawing.Point(220, 131);
+            this.progressBar_Persuasiveness.Name = "progressBar_Persuasiveness";
+            this.progressBar_Persuasiveness.Size = new System.Drawing.Size(85, 10);
+            this.progressBar_Persuasiveness.TabIndex = 5;
             // 
-            // textBox4
+            // progressBar_Trade
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(171, 130);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(43, 21);
-            this.textBox4.TabIndex = 4;
+            this.progressBar_Trade.Location = new System.Drawing.Point(220, 35);
+            this.progressBar_Trade.Name = "progressBar_Trade";
+            this.progressBar_Trade.Size = new System.Drawing.Size(85, 10);
+            this.progressBar_Trade.TabIndex = 5;
             // 
-            // textBox3
+            // textBox_LevelVigilance
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(171, 98);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(43, 21);
-            this.textBox3.TabIndex = 4;
+            this.textBox_LevelVigilance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_LevelVigilance.Location = new System.Drawing.Point(171, 93);
+            this.textBox_LevelVigilance.Name = "textBox_LevelVigilance";
+            this.textBox_LevelVigilance.Size = new System.Drawing.Size(43, 21);
+            this.textBox_LevelVigilance.TabIndex = 4;
+            this.textBox_LevelVigilance.Text = "0";
+            this.textBox_LevelVigilance.TextChanged += new System.EventHandler(this.textBox_LevelVigilance_TextChanged);
+            this.textBox_LevelVigilance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
-            // textBox2
+            // textBoxLevelPersuasiveness
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(171, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(43, 21);
-            this.textBox2.TabIndex = 4;
+            this.textBoxLevelPersuasiveness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLevelPersuasiveness.Location = new System.Drawing.Point(171, 125);
+            this.textBoxLevelPersuasiveness.Name = "textBoxLevelPersuasiveness";
+            this.textBoxLevelPersuasiveness.Size = new System.Drawing.Size(43, 21);
+            this.textBoxLevelPersuasiveness.TabIndex = 4;
+            this.textBoxLevelPersuasiveness.Text = "0";
+            this.textBoxLevelPersuasiveness.TextChanged += new System.EventHandler(this.textBox_LevelTrade_TextChanged);
+            this.textBoxLevelPersuasiveness.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
-            // textBox1
+            // textBox_LevelPerformance
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(64, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 21);
-            this.textBox1.TabIndex = 4;
+            this.textBox_LevelPerformance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_LevelPerformance.Location = new System.Drawing.Point(171, 61);
+            this.textBox_LevelPerformance.Name = "textBox_LevelPerformance";
+            this.textBox_LevelPerformance.Size = new System.Drawing.Size(43, 21);
+            this.textBox_LevelPerformance.TabIndex = 4;
+            this.textBox_LevelPerformance.Text = "0";
+            this.textBox_LevelPerformance.TextChanged += new System.EventHandler(this.textBox_LevelPerformance_TextChanged);
+            this.textBox_LevelPerformance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // textBox_LevelTrade
+            // 
+            this.textBox_LevelTrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_LevelTrade.Location = new System.Drawing.Point(171, 29);
+            this.textBox_LevelTrade.Name = "textBox_LevelTrade";
+            this.textBox_LevelTrade.Size = new System.Drawing.Size(43, 21);
+            this.textBox_LevelTrade.TabIndex = 4;
+            this.textBox_LevelTrade.Text = "0";
+            this.textBox_LevelTrade.TextChanged += new System.EventHandler(this.textBox_LevelTrade_TextChanged);
+            this.textBox_LevelTrade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(6, 133);
+            this.label4.Location = new System.Drawing.Point(6, 96);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(162, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "Уровень внимательности:";
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Location = new System.Drawing.Point(6, 128);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(123, 15);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "Уровень убеждения";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(6, 101);
+            this.label3.Location = new System.Drawing.Point(6, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(133, 15);
             this.label3.TabIndex = 2;
@@ -173,17 +226,27 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(6, 69);
+            this.label2.Location = new System.Drawing.Point(6, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Уровень торговли:";
             // 
+            // textBox_Money
+            // 
+            this.textBox_Money.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_Money.Location = new System.Drawing.Point(69, 25);
+            this.textBox_Money.Name = "textBox_Money";
+            this.textBox_Money.Size = new System.Drawing.Size(134, 21);
+            this.textBox_Money.TabIndex = 4;
+            this.textBox_Money.Text = "0";
+            this.textBox_Money.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(6, 37);
+            this.label1.Location = new System.Drawing.Point(11, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 15);
             this.label1.TabIndex = 0;
@@ -194,6 +257,7 @@
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.progressBar4);
+            this.groupBox2.Controls.Add(this.button9);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.Location = new System.Drawing.Point(345, 13);
@@ -223,22 +287,22 @@
             this.button2.Text = "Купить травяной чай.";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(4, 131);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(234, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Отдохнуть денёк.";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // progressBar4
             // 
             this.progressBar4.Location = new System.Drawing.Point(150, 25);
             this.progressBar4.Name = "progressBar4";
             this.progressBar4.Size = new System.Drawing.Size(85, 16);
             this.progressBar4.TabIndex = 5;
+            // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button9.Location = new System.Drawing.Point(9, 47);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(234, 23);
+            this.button9.TabIndex = 6;
+            this.button9.Text = "Отдохнуть денёк.";
+            this.button9.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -250,30 +314,73 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Степень покоцаности:";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(4, 131);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(234, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Отдохнуть денёк.";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.textBox_Prize);
+            this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label_Tips);
             this.groupBox3.Controls.Add(this.label_Salaray);
             this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.label_buyBarels);
-            this.groupBox3.Controls.Add(this.label_companies);
-            this.groupBox3.Controls.Add(this.label_buyMug);
-            this.groupBox3.Controls.Add(this.label_popularity);
+            this.groupBox3.Controls.Add(this.button_WorkAWeek);
+            this.groupBox3.Controls.Add(this.button_Prize);
+            this.groupBox3.Controls.Add(this.button_Work);
+            this.groupBox3.Controls.Add(this.textBox_SalaryBarelCost);
+            this.groupBox3.Controls.Add(this.textBox_SalaryMugCost);
+            this.groupBox3.Controls.Add(this.textBox_SalaryBarels);
+            this.groupBox3.Controls.Add(this.textBox_Popularity);
+            this.groupBox3.Controls.Add(this.textBox_SalaryMugs);
+            this.groupBox3.Controls.Add(this.textBox_days);
+            this.groupBox3.Controls.Add(this.label_SoldBarels);
+            this.groupBox3.Controls.Add(this.label_Bayers);
+            this.groupBox3.Controls.Add(this.label_Parties);
+            this.groupBox3.Controls.Add(this.label_SoldMug);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox3.Location = new System.Drawing.Point(11, 188);
+            this.groupBox3.Location = new System.Drawing.Point(13, 188);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(328, 241);
+            this.groupBox3.Size = new System.Drawing.Size(319, 352);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Работа";
+            // 
+            // textBox_Prize
+            // 
+            this.textBox_Prize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_Prize.Location = new System.Drawing.Point(72, 268);
+            this.textBox_Prize.Name = "textBox_Prize";
+            this.textBox_Prize.Size = new System.Drawing.Size(52, 21);
+            this.textBox_Prize.TabIndex = 4;
+            this.textBox_Prize.Text = "0";
+            this.textBox_Prize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.Location = new System.Drawing.Point(14, 271);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(56, 15);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Премия:";
             // 
             // label7
             // 
@@ -289,7 +396,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(8, 190);
+            this.label11.Location = new System.Drawing.Point(11, 222);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(118, 15);
             this.label11.TabIndex = 0;
@@ -299,17 +406,27 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(8, 166);
+            this.label10.Location = new System.Drawing.Point(11, 207);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(116, 15);
             this.label10.TabIndex = 0;
             this.label10.Text = "Пришло компаний:";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.Location = new System.Drawing.Point(8, 166);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(133, 15);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Пришло покупателей:";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(8, 141);
+            this.label9.Location = new System.Drawing.Point(8, 181);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(127, 15);
             this.label9.TabIndex = 0;
@@ -319,7 +436,7 @@
             // 
             this.label_Tips.AutoSize = true;
             this.label_Tips.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_Tips.Location = new System.Drawing.Point(141, 218);
+            this.label_Tips.Location = new System.Drawing.Point(144, 246);
             this.label_Tips.Name = "label_Tips";
             this.label_Tips.Size = new System.Drawing.Size(55, 15);
             this.label_Tips.TabIndex = 0;
@@ -329,7 +446,7 @@
             // 
             this.label_Salaray.AutoSize = true;
             this.label_Salaray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_Salaray.Location = new System.Drawing.Point(8, 218);
+            this.label_Salaray.Location = new System.Drawing.Point(11, 246);
             this.label_Salaray.Name = "label_Salaray";
             this.label_Salaray.Size = new System.Drawing.Size(67, 15);
             this.label_Salaray.TabIndex = 0;
@@ -345,6 +462,46 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Посещаемость нашего заведения:";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.Location = new System.Drawing.Point(75, 134);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(166, 15);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "проданых бочёнков платят";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.Location = new System.Drawing.Point(75, 107);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(152, 15);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "проданых кружек платят";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.Location = new System.Drawing.Point(11, 134);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(22, 15);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "За";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(11, 107);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(22, 15);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "За";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -355,83 +512,148 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Работать";
             // 
-            // button5
+            // button_WorkAWeek
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(11, 76);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(227, 26);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Работать неделю";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button_WorkAWeek.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_WorkAWeek.Location = new System.Drawing.Point(11, 76);
+            this.button_WorkAWeek.Name = "button_WorkAWeek";
+            this.button_WorkAWeek.Size = new System.Drawing.Size(227, 26);
+            this.button_WorkAWeek.TabIndex = 6;
+            this.button_WorkAWeek.Text = "Работать неделю";
+            this.button_WorkAWeek.UseVisualStyleBackColor = true;
+            this.button_WorkAWeek.Click += new System.EventHandler(this.button_WorkAWeek_Click);
             // 
-            // button4
+            // button_Prize
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(173, 45);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(65, 21);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Ок";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button_Prize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_Prize.Location = new System.Drawing.Point(139, 268);
+            this.button_Prize.Name = "button_Prize";
+            this.button_Prize.Size = new System.Drawing.Size(65, 21);
+            this.button_Prize.TabIndex = 6;
+            this.button_Prize.Text = "Спасибо";
+            this.button_Prize.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // button_Work
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(78, 45);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(43, 21);
-            this.textBox5.TabIndex = 4;
+            this.button_Work.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_Work.Location = new System.Drawing.Point(173, 45);
+            this.button_Work.Name = "button_Work";
+            this.button_Work.Size = new System.Drawing.Size(65, 21);
+            this.button_Work.TabIndex = 6;
+            this.button_Work.Text = "Ок";
+            this.button_Work.UseVisualStyleBackColor = true;
+            this.button_Work.Click += new System.EventHandler(this.button_Work_Click);
             // 
-            // label_buyBarels
+            // textBox_SalaryBarelCost
             // 
-            this.label_buyBarels.AutoSize = true;
-            this.label_buyBarels.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_buyBarels.Location = new System.Drawing.Point(132, 190);
-            this.label_buyBarels.Name = "label_buyBarels";
-            this.label_buyBarels.Size = new System.Drawing.Size(52, 15);
-            this.label_buyBarels.TabIndex = 0;
-            this.label_buyBarels.Text = "Деньги:";
+            this.textBox_SalaryBarelCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_SalaryBarelCost.Location = new System.Drawing.Point(242, 131);
+            this.textBox_SalaryBarelCost.Name = "textBox_SalaryBarelCost";
+            this.textBox_SalaryBarelCost.Size = new System.Drawing.Size(32, 21);
+            this.textBox_SalaryBarelCost.TabIndex = 4;
+            this.textBox_SalaryBarelCost.Text = "0";
+            this.textBox_SalaryBarelCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
-            // label_companies
+            // textBox_SalaryMugCost
             // 
-            this.label_companies.AutoSize = true;
-            this.label_companies.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_companies.Location = new System.Drawing.Point(130, 166);
-            this.label_companies.Name = "label_companies";
-            this.label_companies.Size = new System.Drawing.Size(52, 15);
-            this.label_companies.TabIndex = 0;
-            this.label_companies.Text = "Деньги:";
+            this.textBox_SalaryMugCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_SalaryMugCost.Location = new System.Drawing.Point(233, 104);
+            this.textBox_SalaryMugCost.Name = "textBox_SalaryMugCost";
+            this.textBox_SalaryMugCost.Size = new System.Drawing.Size(32, 21);
+            this.textBox_SalaryMugCost.TabIndex = 4;
+            this.textBox_SalaryMugCost.Text = "0";
+            this.textBox_SalaryMugCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
-            // label_buyMug
+            // textBox_SalaryBarels
             // 
-            this.label_buyMug.AutoSize = true;
-            this.label_buyMug.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_buyMug.Location = new System.Drawing.Point(141, 141);
-            this.label_buyMug.Name = "label_buyMug";
-            this.label_buyMug.Size = new System.Drawing.Size(52, 15);
-            this.label_buyMug.TabIndex = 0;
-            this.label_buyMug.Text = "Деньги:";
+            this.textBox_SalaryBarels.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_SalaryBarels.Location = new System.Drawing.Point(38, 131);
+            this.textBox_SalaryBarels.Name = "textBox_SalaryBarels";
+            this.textBox_SalaryBarels.Size = new System.Drawing.Size(31, 21);
+            this.textBox_SalaryBarels.TabIndex = 4;
+            this.textBox_SalaryBarels.Text = "0";
+            this.textBox_SalaryBarels.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
-            // label_popularity
+            // textBox_Popularity
             // 
-            this.label_popularity.AutoSize = true;
-            this.label_popularity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_popularity.Location = new System.Drawing.Point(222, 22);
-            this.label_popularity.Name = "label_popularity";
-            this.label_popularity.Size = new System.Drawing.Size(52, 15);
-            this.label_popularity.TabIndex = 0;
-            this.label_popularity.Text = "Деньги:";
+            this.textBox_Popularity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_Popularity.Location = new System.Drawing.Point(218, 19);
+            this.textBox_Popularity.Name = "textBox_Popularity";
+            this.textBox_Popularity.Size = new System.Drawing.Size(43, 21);
+            this.textBox_Popularity.TabIndex = 4;
+            this.textBox_Popularity.Text = "0";
+            this.textBox_Popularity.TextChanged += new System.EventHandler(this.textBox_Popularity_TextChanged);
+            this.textBox_Popularity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // textBox_SalaryMugs
+            // 
+            this.textBox_SalaryMugs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_SalaryMugs.Location = new System.Drawing.Point(38, 104);
+            this.textBox_SalaryMugs.Name = "textBox_SalaryMugs";
+            this.textBox_SalaryMugs.Size = new System.Drawing.Size(31, 21);
+            this.textBox_SalaryMugs.TabIndex = 4;
+            this.textBox_SalaryMugs.Text = "0";
+            this.textBox_SalaryMugs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // textBox_days
+            // 
+            this.textBox_days.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_days.Location = new System.Drawing.Point(78, 45);
+            this.textBox_days.Name = "textBox_days";
+            this.textBox_days.Size = new System.Drawing.Size(43, 21);
+            this.textBox_days.TabIndex = 4;
+            this.textBox_days.Text = "0";
+            this.textBox_days.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // label_SoldBarels
+            // 
+            this.label_SoldBarels.AutoSize = true;
+            this.label_SoldBarels.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_SoldBarels.Location = new System.Drawing.Point(135, 222);
+            this.label_SoldBarels.Name = "label_SoldBarels";
+            this.label_SoldBarels.Size = new System.Drawing.Size(52, 15);
+            this.label_SoldBarels.TabIndex = 0;
+            this.label_SoldBarels.Text = "Деньги:";
+            // 
+            // label_Bayers
+            // 
+            this.label_Bayers.AutoSize = true;
+            this.label_Bayers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_Bayers.Location = new System.Drawing.Point(141, 166);
+            this.label_Bayers.Name = "label_Bayers";
+            this.label_Bayers.Size = new System.Drawing.Size(52, 15);
+            this.label_Bayers.TabIndex = 0;
+            this.label_Bayers.Text = "Деньги:";
+            // 
+            // label_Parties
+            // 
+            this.label_Parties.AutoSize = true;
+            this.label_Parties.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_Parties.Location = new System.Drawing.Point(133, 207);
+            this.label_Parties.Name = "label_Parties";
+            this.label_Parties.Size = new System.Drawing.Size(52, 15);
+            this.label_Parties.TabIndex = 0;
+            this.label_Parties.Text = "Деньги:";
+            // 
+            // label_SoldMug
+            // 
+            this.label_SoldMug.AutoSize = true;
+            this.label_SoldMug.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_SoldMug.Location = new System.Drawing.Point(141, 181);
+            this.label_SoldMug.Name = "label_SoldMug";
+            this.label_SoldMug.Size = new System.Drawing.Size(52, 15);
+            this.label_SoldMug.TabIndex = 0;
+            this.label_SoldMug.Text = "Деньги:";
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.labelWeekends);
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.button8);
             this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.button7);
             this.groupBox4.Controls.Add(this.label_Result);
             this.groupBox4.Controls.Add(this.button6);
+            this.groupBox4.Controls.Add(this.textBox_Weekends);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox4.Location = new System.Drawing.Point(345, 188);
             this.groupBox4.Name = "groupBox4";
@@ -439,16 +661,6 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Выходные";
-            // 
-            // labelWeekends
-            // 
-            this.labelWeekends.AutoSize = true;
-            this.labelWeekends.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelWeekends.Location = new System.Drawing.Point(151, 28);
-            this.labelWeekends.Name = "labelWeekends";
-            this.labelWeekends.Size = new System.Drawing.Size(52, 15);
-            this.labelWeekends.TabIndex = 0;
-            this.labelWeekends.Text = "Деньги:";
             // 
             // label13
             // 
@@ -460,15 +672,15 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Накоплено выходных:";
             // 
-            // button6
+            // button8
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(4, 80);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(235, 45);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Устроить представление, попробовать продать бочёнок";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button8.Location = new System.Drawing.Point(4, 158);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(234, 23);
+            this.button8.TabIndex = 6;
+            this.button8.Text = "Переманивать клиентов";
+            this.button8.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -480,16 +692,6 @@
             this.button7.Text = "Работать в выходной";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button8.Location = new System.Drawing.Point(4, 158);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(234, 23);
-            this.button8.TabIndex = 6;
-            this.button8.Text = "Переманивать клиентов";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // label_Result
             // 
             this.label_Result.AutoSize = true;
@@ -500,17 +702,94 @@
             this.label_Result.TabIndex = 0;
             this.label_Result.Text = "Зарплата:";
             // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button6.Location = new System.Drawing.Point(4, 80);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(235, 45);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Устроить представление, попробовать продать бочёнок";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // textBox_Weekends
+            // 
+            this.textBox_Weekends.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_Weekends.Location = new System.Drawing.Point(151, 25);
+            this.textBox_Weekends.Name = "textBox_Weekends";
+            this.textBox_Weekends.Size = new System.Drawing.Size(43, 21);
+            this.textBox_Weekends.TabIndex = 4;
+            this.textBox_Weekends.Text = "0";
+            this.textBox_Weekends.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.textBox_Money);
+            this.groupBox5.Controls.Add(this.label1);
+            this.groupBox5.Controls.Add(this.textBox_CostFood);
+            this.groupBox5.Controls.Add(this.label18);
+            this.groupBox5.Controls.Add(this.textBox_CostFlat);
+            this.groupBox5.Controls.Add(this.label17);
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox5.Location = new System.Drawing.Point(345, 423);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(249, 117);
+            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Финансы";
+            // 
+            // textBox_CostFood
+            // 
+            this.textBox_CostFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_CostFood.Location = new System.Drawing.Point(162, 82);
+            this.textBox_CostFood.Name = "textBox_CostFood";
+            this.textBox_CostFood.Size = new System.Drawing.Size(41, 21);
+            this.textBox_CostFood.TabIndex = 4;
+            this.textBox_CostFood.Text = "0";
+            this.textBox_CostFood.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.Location = new System.Drawing.Point(11, 85);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(123, 15);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Плата в день за еду";
+            // 
+            // textBox_CostFlat
+            // 
+            this.textBox_CostFlat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_CostFlat.Location = new System.Drawing.Point(162, 55);
+            this.textBox_CostFlat.Name = "textBox_CostFlat";
+            this.textBox_CostFlat.Size = new System.Drawing.Size(41, 21);
+            this.textBox_CostFlat.TabIndex = 4;
+            this.textBox_CostFlat.Text = "0";
+            this.textBox_CostFlat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.Location = new System.Drawing.Point(11, 58);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(145, 15);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Плата в день за постой";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 441);
+            this.ClientSize = new System.Drawing.Size(606, 552);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Бармен в трактире";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -520,6 +799,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -530,13 +811,13 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ProgressBar progressBar3;
-        private System.Windows.Forms.ProgressBar progressBar2;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ProgressBar progressBar_Vigilance;
+        private System.Windows.Forms.ProgressBar progressBar_Performance;
+        private System.Windows.Forms.ProgressBar progressBar_Trade;
+        private System.Windows.Forms.TextBox textBox_LevelVigilance;
+        private System.Windows.Forms.TextBox textBox_LevelPerformance;
+        private System.Windows.Forms.TextBox textBox_LevelTrade;
+        private System.Windows.Forms.TextBox textBox_Money;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -554,19 +835,41 @@
         private System.Windows.Forms.Label label_Salaray;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label_buyBarels;
-        private System.Windows.Forms.Label label_companies;
-        private System.Windows.Forms.Label label_buyMug;
-        private System.Windows.Forms.Label label_popularity;
-        private System.Windows.Forms.Label labelWeekends;
+        private System.Windows.Forms.Button button_WorkAWeek;
+        private System.Windows.Forms.Button button_Work;
+        private System.Windows.Forms.TextBox textBox_days;
+        private System.Windows.Forms.Label label_SoldBarels;
+        private System.Windows.Forms.Label label_Parties;
+        private System.Windows.Forms.Label label_SoldMug;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label_Result;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox_SalaryBarelCost;
+        private System.Windows.Forms.TextBox textBox_SalaryMugCost;
+        private System.Windows.Forms.TextBox textBox_SalaryBarels;
+        private System.Windows.Forms.TextBox textBox_SalaryMugs;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox textBox_CostFlat;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBox_CostFood;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ProgressBar progressBar_Persuasiveness;
+        private System.Windows.Forms.TextBox textBoxLevelPersuasiveness;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBox_Popularity;
+        private System.Windows.Forms.TextBox textBox_Prize;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button button_Prize;
+        private System.Windows.Forms.TextBox textBox_Weekends;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label_Bayers;
     }
 }
 

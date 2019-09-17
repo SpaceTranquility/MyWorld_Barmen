@@ -100,6 +100,11 @@ namespace Barmen
             get { return Convert.ToInt32(textBox_Prize.Text); }
             set { textBox_Prize.Text = value.ToString(); }
         }
+        string WRes
+        {
+            get { return label_WeekendResult.Text; }
+            set { label_WeekendResult.Text = value; }
+        }
 
         const int citiPopular = 12;
         const double PopularK = 1.6;
@@ -118,6 +123,8 @@ namespace Barmen
                 result += d6;
             return result;
         }
+
+        void NextDay() {date.NextDay();DateRenew();}
 
         void DateRenew()
         {
@@ -295,8 +302,7 @@ namespace Barmen
                 //Бытовые расходы
                 Money -= CostFlat + CostFood;
 
-                date.NextDay();
-                DateRenew();
+                NextDay();
                 //Конец рабочего дня
             }
             //Денюжка
@@ -399,7 +405,7 @@ namespace Barmen
             {
                 Weekends--;
                 if (progressBar_Damage.Value > 0) progressBar_Damage.Value--;
-                date.NextDay(); DateRenew();
+                NextDay();
 
                 //Диверсанты
                 if (citiPopular - Popularity < 5)
@@ -438,7 +444,8 @@ namespace Barmen
         {
             if(Weekends >0)
             {
-                Weekends--;
+                WRes = "Славно отдохнул ";
+                Weekends--; NextDay();
                 int buf = Days;
                 Days = 1;
                 WorkDayBaforeWeekend++;
@@ -449,6 +456,7 @@ namespace Barmen
                 if (citiPopular - Popularity < 5)
                     AntiMarketing(8 - citiPopular + Popularity);
             }
+            else WRes = "Некогда ";
 
         }
 
@@ -456,7 +464,7 @@ namespace Barmen
         {
             if (Weekends > 0 && progressBar_Damage.Value < 3)
             {
-                Weekends--;
+                Weekends--; NextDay();
                 int dicePer = 0, diceСheck = 0, PerformanceCheck = 0, TradeСheck = 0, resPers = 0, resСheck = 0;
 
                 do
@@ -480,6 +488,7 @@ namespace Barmen
 
                 if (resPers > resСheck)
                 {
+                    WRes = "Заманил клиентов ";
                     do
                     {
                         dicePer = d6;
@@ -493,9 +502,11 @@ namespace Barmen
                     //Продажа бочёнка и чаевые
                     if (resPers > resСheck)
                     {
+                        WRes += "и втюхал :)";
                         Money += Convert.ToInt32(CostSoldBarels / PartSoldBarels);
                         if (dicePer - diceСheck == 5) Money += 10;
                     }
+                    else WRes += "но не втюхал :'(";
                     //Experience
                     try { progressBar_Trade.Value += Experience(Trade, TradeСheck); }
                     catch { if (progressBar_Trade.Value >= progressBar_Trade.Maximum) if (d2 == 2) Trade++; progressBar_Trade.Value = 0; }
@@ -505,13 +516,14 @@ namespace Barmen
                 if (citiPopular - Popularity < 5)
                     AntiMarketing(8 - citiPopular + Popularity);
             }
+            else WRes = "Не получится ";
         }
 
         private void button_Marketing_Click(object sender, EventArgs e)
         {
             if (Weekends > 0 && Popularity <= citiPopular && progressBar_Damage.Value < 3)
             {
-                Weekends--;
+                Weekends--; NextDay();
                 bool damage = false, hit = false;
                 int dicePer = 0, diceСheck = 0, PerformanceCheck = 0, resPers = 0, resСheck = 0;
 
@@ -525,7 +537,8 @@ namespace Barmen
                     resСheck = PerformanceCheck + diceСheck;
                 }
                 while (resPers == resСheck);
-                if (resPers > resСheck) hit = true;
+                if (resPers > resСheck) { hit = true; WRes = "Убедил "; }
+                else WRes = "Не убедил ";
 
                 //Experience
                 try { progressBar_Performance.Value += 2 * Experience(Performance, PerformanceCheck); }
@@ -540,12 +553,13 @@ namespace Barmen
                 {
                     dicePer = d6;
                     diceСheck = d6;
-                    PerformanceCheck = 4 + d3; //Внимательность
+                    PerformanceCheck = 5 + Popularity - citiPopular; //Внимательность
                     resPers = dicePer + Performance;
                     resСheck = PerformanceCheck + diceСheck;
                 }
                 while (resPers == resСheck);
-                if (resPers < resСheck) damage = true;
+                if (resPers < resСheck) {damage = true; WRes += "и побили ";}
+                else WRes += "и не заметили ";
 
                 //Experience
                 try { progressBar_Performance.Value += 2 * Experience(Performance, PerformanceCheck); }
@@ -555,7 +569,7 @@ namespace Barmen
                         if (d2 == 2) Performance++; progressBar_Performance.Value = 0;
                 }
 
-                if (hit && !damage) { Popularity++; }
+                if (hit && !damage) { Popularity++; WRes = "Успех "; }
                 if (damage) progressBar_Damage.Value++;
 
                 //Диверсанты
@@ -592,10 +606,10 @@ namespace Barmen
                     resTheir = TheirPerformance + diceTheir;
                 }
                 while (resPers == resTheir);
-                if (resPers > resTheir) damage = true;
+                if (resPers > resTheir) { damage = true; WRes += "они отгребли ;)"; }
 
-                //Experience
-                try { progressBar_Vigilance.Value += 5 * Experience(Vigilance, TheirPerformance); }
+                    //Experience
+                    try { progressBar_Vigilance.Value += 5 * Experience(Vigilance, TheirPerformance); }
                 catch
                 {
                     if (progressBar_Vigilance.Value >= progressBar_Vigilance.Maximum)
@@ -603,18 +617,20 @@ namespace Barmen
                 }
             }
 
-            if (hit && !damage) { Popularity--; }
+            if (hit && !damage) { Popularity--; WRes += "Нас опустили "; }
         }
 
         private void button_LookAtBar_Click(object sender, EventArgs e)
         {
             if (Weekends > 0)
             {
-                Weekends--;
+                WRes = "Смотрю за баром ";
+                Weekends--; NextDay();
                 //Диверсанты
                 if (citiPopular - Popularity < 5)
                     AntiMarketing(8 - citiPopular + Popularity,true,Vigilance);
             }
+            else WRes = "Не получится ";
         }
 
         private void button_SaveFile_Click(object sender, EventArgs e)

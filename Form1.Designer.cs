@@ -89,7 +89,7 @@
             this.button_LookAtBar = new System.Windows.Forms.Button();
             this.button_Marketing = new System.Windows.Forms.Button();
             this.button_WorkWeekend = new System.Windows.Forms.Button();
-            this.label_Result = new System.Windows.Forms.Label();
+            this.label_WeekendResult = new System.Windows.Forms.Label();
             this.button_MakeShow = new System.Windows.Forms.Button();
             this.textBox_Weekends = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -814,7 +814,7 @@
             this.groupBox4.Controls.Add(this.button_Marketing);
             this.groupBox4.Controls.Add(this.button_RestDay2);
             this.groupBox4.Controls.Add(this.button_WorkWeekend);
-            this.groupBox4.Controls.Add(this.label_Result);
+            this.groupBox4.Controls.Add(this.label_WeekendResult);
             this.groupBox4.Controls.Add(this.button_MakeShow);
             this.groupBox4.Controls.Add(this.textBox_Weekends);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -868,15 +868,16 @@
             this.button_WorkWeekend.UseVisualStyleBackColor = true;
             this.button_WorkWeekend.Click += new System.EventHandler(this.button_WorkWeekend_Click);
             // 
-            // label_Result
+            // label_WeekendResult
             // 
-            this.label_Result.AutoSize = true;
-            this.label_Result.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_Result.Location = new System.Drawing.Point(6, 217);
-            this.label_Result.Name = "label_Result";
-            this.label_Result.Size = new System.Drawing.Size(67, 15);
-            this.label_Result.TabIndex = 0;
-            this.label_Result.Text = "Зарплата:";
+            this.label_WeekendResult.AllowDrop = true;
+            this.label_WeekendResult.AutoSize = true;
+            this.label_WeekendResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_WeekendResult.Location = new System.Drawing.Point(6, 217);
+            this.label_WeekendResult.Name = "label_WeekendResult";
+            this.label_WeekendResult.Size = new System.Drawing.Size(67, 15);
+            this.label_WeekendResult.TabIndex = 0;
+            this.label_WeekendResult.Text = "                    ";
             // 
             // button_MakeShow
             // 
@@ -1046,7 +1047,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button_Marketing;
         private System.Windows.Forms.Button button_WorkWeekend;
-        private System.Windows.Forms.Label label_Result;
+        private System.Windows.Forms.Label label_WeekendResult;
         private System.Windows.Forms.Button button_MakeShow;
         private System.Windows.Forms.Button button_RestDay;
         private System.Windows.Forms.Label label16;

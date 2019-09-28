@@ -181,9 +181,9 @@ namespace Barmen
                         resСheck = TradeСheck + diceСheck;
                     }
                     while (resPers == resСheck);
-                    //Experience
+                    //Experience Trade
                     try { progressBar_Trade.Value += Experience(Trade, TradeСheck); }
-                    catch { if (progressBar_Trade.Value >= progressBar_Trade.Maximum) { int d = d2; if (d == 2) Trade++; progressBar_Trade.Value = 0; } }
+                    catch { if (d2 == 2) Trade++; progressBar_Trade.Value = 0; }
                     //Продажа кружки и чаевые
                     if (resPers > resСheck)
                     {
@@ -205,9 +205,9 @@ namespace Barmen
                             resСheck = PersuasivenessCheck + diceСheck;
                         }
                         while (resPers == resСheck);
-                        //Experience
+                        //Experience Persuasiveness
                         try { progressBar_Persuasiveness.Value += Experience(Persuasiveness, PersuasivenessCheck); }
-                        catch { if (progressBar_Persuasiveness.Value >= progressBar_Persuasiveness.Maximum) { int d = d2; if (d == 2) Persuasiveness++; progressBar_Persuasiveness.Value = 0; } }
+                        catch { { if (d2 == 2) Persuasiveness++; progressBar_Persuasiveness.Value = 0; } }
 
                         if (resPers > resСheck)
                         {
@@ -220,9 +220,9 @@ namespace Barmen
                                 resСheck = TradeСheck + diceСheck;
                             }
                             while (resPers == resСheck);
-                            //Experience
+                            //Experience Trade
                             try { progressBar_Trade.Value += Experience(Trade, TradeСheck); }
-                            catch { if (progressBar_Trade.Value >= progressBar_Trade.Maximum) { int d = d2; if (d == 2) Trade++; progressBar_Trade.Value = 0; } }
+                            catch {  if (d2 == 2) Trade++; progressBar_Trade.Value = 0; }
                             //Продажа кружки
                             if (resPers > resСheck) SoldMugs++;                            
                         }
@@ -242,9 +242,9 @@ namespace Barmen
                             resСheck = VigilanceCheck + diceСheck;
                         }
                         while (resPers == resСheck);
-                        //Experience
-                        try { progressBar_Vigilance.Value += Experience(Vigilance, VigilanceCheck); }
-                        catch { if (progressBar_Vigilance.Value >= progressBar_Vigilance.Maximum) { int d = d2; if (d == 2) Vigilance++; progressBar_Vigilance.Value = 0; } }
+                        //Experience Vigilance
+                        try { progressBar_Vigilance.Value += 2 * Experience(Vigilance, VigilanceCheck); }
+                        catch { if (d2 == 2) Vigilance++; progressBar_Vigilance.Value = 0; }
 
                         if (resPers > resСheck)
                         {
@@ -282,9 +282,9 @@ namespace Barmen
                         soldBarels++;
                         if (dicePer - diceСheck == 5) Tips+=10;
                     }
-                    //Experience
+                    //Experience Trade
                     try { progressBar_Trade.Value += Experience(Trade, TradeСheck); }
-                    catch { if (progressBar_Trade.Value >= progressBar_Trade.Maximum) if (d2 == 2) Trade++; progressBar_Trade.Value = 0; }
+                    catch { if (d2 == 2) Trade++; progressBar_Trade.Value = 0; }
                 }
 
                 //Обновление результатов
@@ -477,7 +477,7 @@ namespace Barmen
                 }
                 while (resPers == resСheck);
 
-                //Experience
+                //Experience Performance
                 try { progressBar_Performance.Value += 5 * Experience(Performance, PerformanceCheck); }
                 catch
                 {
@@ -507,9 +507,9 @@ namespace Barmen
                         if (dicePer - diceСheck == 5) Money += 10;
                     }
                     else WRes += "но не втюхал :'(";
-                    //Experience
+                    //Experience Trade
                     try { progressBar_Trade.Value += Experience(Trade, TradeСheck); }
-                    catch { if (progressBar_Trade.Value >= progressBar_Trade.Maximum) if (d2 == 2) Trade++; progressBar_Trade.Value = 0; }
+                    catch { if (d2 == 2) Trade++; progressBar_Trade.Value = 0; }
                 }
 
                 //Диверсанты
@@ -523,6 +523,10 @@ namespace Barmen
         {
             if (Weekends > 0 && Popularity <= citiPopular && progressBar_Damage.Value < 3)
             {
+                //Диверсанты
+                if (citiPopular - Popularity < 5)
+                    AntiMarketing(8 - citiPopular + Popularity);
+
                 Weekends--; NextDay();
                 bool damage = false, hit = false;
                 int dicePer = 0, diceСheck = 0, PerformanceCheck = 0, resPers = 0, resСheck = 0;
@@ -540,7 +544,7 @@ namespace Barmen
                 if (resPers > resСheck) { hit = true; WRes = "Убедил "; }
                 else WRes = "Не убедил ";
 
-                //Experience
+                //Experience Performance
                 try { progressBar_Performance.Value += 2 * Experience(Performance, PerformanceCheck); }
                 catch
                 {
@@ -561,7 +565,7 @@ namespace Barmen
                 if (resPers < resСheck) {damage = true; WRes += "и побили ";}
                 else WRes += "и не заметили ";
 
-                //Experience
+                //Experience Performance
                 try { progressBar_Performance.Value += 2 * Experience(Performance, PerformanceCheck); }
                 catch
                 {
@@ -571,10 +575,6 @@ namespace Barmen
 
                 if (hit && !damage) { Popularity++; WRes = "Успех "; }
                 if (damage) progressBar_Damage.Value++;
-
-                //Диверсанты
-                if (citiPopular - Popularity < 5)
-                    AntiMarketing(8 - citiPopular + Popularity);
             }
         }
 
@@ -608,7 +608,7 @@ namespace Barmen
                 while (resPers == resTheir);
                 if (resPers > resTheir) { damage = true; WRes += "они отгребли ;)"; }
 
-                    //Experience
+                    //Experience Vigilance
                     try { progressBar_Vigilance.Value += 5 * Experience(Vigilance, TheirPerformance); }
                 catch
                 {

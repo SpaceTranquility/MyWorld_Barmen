@@ -1,6 +1,6 @@
 ﻿namespace Barmen
 {
-    partial class Form1
+    partial class Barmen
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -108,6 +108,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.Controls.Add(this.progressBar_Vigilance);
             this.groupBox1.Controls.Add(this.progressBar_Performance);
             this.groupBox1.Controls.Add(this.progressBar_Persuasiveness);
@@ -270,6 +271,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox2.Controls.Add(this.button_BuyHillOil);
             this.groupBox2.Controls.Add(this.button_BuyHillTea);
             this.groupBox2.Controls.Add(this.progressBar_Damage);
@@ -348,6 +350,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox3.Controls.Add(this.checkBox_ConvinceAll);
             this.groupBox3.Controls.Add(this.checkBox_ConvinceSome);
             this.groupBox3.Controls.Add(this.comboBox_Month);
@@ -809,6 +812,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.button_LookAtBar);
             this.groupBox4.Controls.Add(this.button_Marketing);
@@ -903,6 +907,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox5.Controls.Add(this.textBox_Money);
             this.groupBox5.Controls.Add(this.label1);
             this.groupBox5.Controls.Add(this.textBox_CostFood);
@@ -961,6 +966,7 @@
             // 
             // button_LoadFile
             // 
+            this.button_LoadFile.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_LoadFile.Location = new System.Drawing.Point(203, 548);
             this.button_LoadFile.Name = "button_LoadFile";
             this.button_LoadFile.Size = new System.Drawing.Size(105, 23);
@@ -971,6 +977,7 @@
             // 
             // button_SaveFile
             // 
+            this.button_SaveFile.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_SaveFile.Location = new System.Drawing.Point(43, 548);
             this.button_SaveFile.Name = "button_SaveFile";
             this.button_SaveFile.Size = new System.Drawing.Size(105, 23);
@@ -979,11 +986,11 @@
             this.button_SaveFile.UseVisualStyleBackColor = true;
             this.button_SaveFile.Click += new System.EventHandler(this.button_SaveFile_Click);
             // 
-            // Form1
+            // Barmen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(606, 583);
+            this.ClientSize = new System.Drawing.Size(604, 581);
             this.Controls.Add(this.button_SaveFile);
             this.Controls.Add(this.button_LoadFile);
             this.Controls.Add(this.groupBox5);
@@ -991,7 +998,8 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.MinimumSize = new System.Drawing.Size(620, 620);
+            this.Name = "Barmen";
             this.Text = "Бармен в трактире";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);

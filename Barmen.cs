@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using System.IO;
@@ -13,7 +6,7 @@ using System.IO;
 
 namespace Barmen
 {
-    public partial class Form1 : Form
+    public partial class Barmen : Form
     {
         XDocument SaveFilePers = new XDocument();
         WorldDate date = new WorldDate();
@@ -280,7 +273,7 @@ namespace Barmen
                     if (resPers > resСheck)
                     {
                         soldBarels++;
-                        if (dicePer - diceСheck == 5) Tips+=10;
+                        if (dicePer - diceСheck == 5) Tips+=2*d6;
                     }
                     //Experience Trade
                     try { progressBar_Trade.Value += Experience(Trade, TradeСheck); }
@@ -346,7 +339,7 @@ namespace Barmen
             button_Work.PerformClick();
         }
 
-        //Только цифры
+        //Контроль ввода только цифр
         private void textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(8))
@@ -367,7 +360,7 @@ namespace Barmen
                 if ((sender as TextBox).Text.Length == 0)
                     (sender as TextBox).Text = "0";
         }
-        public Form1()
+        public Barmen()
         {
             InitializeComponent();
         }
